@@ -1,0 +1,14 @@
+C:\Users\GDC20\Desktop\VCSdotnet\bin\Debug\netcoreapp2.2\VCSdotnet.deps.json
+C:\Users\GDC20\Desktop\VCSdotnet\bin\Debug\netcoreapp2.2\VCSdotnet.runtimeconfig.json
+C:\Users\GDC20\Desktop\VCSdotnet\bin\Debug\netcoreapp2.2\VCSdotnet.runtimeconfig.dev.json
+C:\Users\GDC20\Desktop\VCSdotnet\bin\Debug\netcoreapp2.2\VCSdotnet.dll
+C:\Users\GDC20\Desktop\VCSdotnet\bin\Debug\netcoreapp2.2\VCSdotnet.pdb
+C:\Users\GDC20\Desktop\VCSdotnet\obj\Debug\netcoreapp2.2\VCSdotnet.csprojAssemblyReference.cache
+C:\Users\GDC20\Desktop\VCSdotnet\obj\Debug\netcoreapp2.2\VCSdotnet.csproj.CoreCompileInputs.cache
+C:\Users\GDC20\Desktop\VCSdotnet\obj\Debug\netcoreapp2.2\VCSdotnet.RazorAssemblyInfo.cache
+C:\Users\GDC20\Desktop\VCSdotnet\obj\Debug\netcoreapp2.2\VCSdotnet.RazorAssemblyInfo.cs
+C:\Users\GDC20\Desktop\VCSdotnet\obj\Debug\netcoreapp2.2\VCSdotnet.AssemblyInfoInputs.cache
+C:\Users\GDC20\Desktop\VCSdotnet\obj\Debug\netcoreapp2.2\VCSdotnet.AssemblyInfo.cs
+C:\Users\GDC20\Desktop\VCSdotnet\obj\Debug\netcoreapp2.2\VCSdotnet.RazorTargetAssemblyInfo.cache
+C:\Users\GDC20\Desktop\VCSdotnet\obj\Debug\netcoreapp2.2\VCSdotnet.dll
+C:\Users\GDC20\Desktop\VCSdotnet\obj\Debug\netcoreapp2.2\VCSdotnet.pdb
