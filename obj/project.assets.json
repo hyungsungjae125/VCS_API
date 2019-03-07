@@ -12078,11 +12078,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\GDC20\\Desktop\\VCSdotnet\\VCSdotnet.csproj",
+      "projectUniqueName": "C:\\Users\\GDC20\\Desktop\\VCS_API\\VCSdotnet\\VCSdotnet.csproj",
       "projectName": "VCSdotnet",
-      "projectPath": "C:\\Users\\GDC20\\Desktop\\VCSdotnet\\VCSdotnet.csproj",
+      "projectPath": "C:\\Users\\GDC20\\Desktop\\VCS_API\\VCSdotnet\\VCSdotnet.csproj",
       "packagesPath": "C:\\Users\\GDC20\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\GDC20\\Desktop\\VCSdotnet\\obj\\",
+      "outputPath": "C:\\Users\\GDC20\\Desktop\\VCS_API\\VCSdotnet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
