@@ -24,12 +24,12 @@ namespace VCSdotnet.Controllers
         [Route("api/login")]
         [EnableCors("AllowOrigin")]
         [HttpPost]
-        public string Login([FromForm] string id,[FromForm] string pw)
+        public ArrayList Login([FromForm] string id,[FromForm] string pw)
         {
             Hashtable param = new Hashtable();
             param.Add("@id",id);
             param.Add("@pw",pw);
-            string result;
+            ArrayList result = new ArrayList();
             try{
                 Database db = new Database();
                 string sql = "sp_SearchMember";
@@ -37,7 +37,7 @@ namespace VCSdotnet.Controllers
                 db.Close();
                 return result;
             }catch{
-                return "0";
+                return new ArrayList();
             }
             
         }

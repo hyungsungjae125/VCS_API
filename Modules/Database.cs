@@ -12,9 +12,7 @@ namespace VCSdotnet{
         public Database(){
             status=GetConnection();
         }
-        ~Database(){
-            Close();
-        }
+        
         private bool GetConnection(){
             try{
                 conn= new SqlConnection(connStr);
@@ -64,9 +62,9 @@ namespace VCSdotnet{
             return list;
         }
 
-        public string GetList(string sql,Hashtable ht){
+        public ArrayList GetList(string sql,Hashtable ht){
             if(status){
-                string result = "";
+                ArrayList result = new ArrayList();
                 try{
                     SqlCommand comm = new SqlCommand();
                     comm.Connection=conn;
@@ -77,7 +75,11 @@ namespace VCSdotnet{
                     }
                     SqlDataReader reader = comm.ExecuteReader();
                     while(reader.Read()){
-                        result=reader.GetValue(0).ToString();
+                        Hashtable col = new Hashtable();
+                        for(int i=0;i<reader.FieldCount;i++){
+                            col.Add(reader.GetName(i),reader.GetValue(i));
+                        }
+                        result.Add(col);
                     }
                     reader.Close();
                     return result;
@@ -88,7 +90,28 @@ namespace VCSdotnet{
             return null;
         }
 
-        public bool NonQuery(string sql,Hashtable ht){
+        // public bool NonQuery(string sql,Hashtable ht){
+        //     if(status){
+        //         try{
+        //             SqlCommand comm = new SqlCommand();
+        //             comm.Connection=conn;
+        //             comm.CommandText=sql;
+        //             comm.CommandType=CommandType.StoredProcedure;
+        //             foreach(DictionaryEntry data in ht){
+        //                 comm.Parameters.AddWithValue(data.Key.ToString(),data.Value);
+        //             }
+
+        //             int cnt = comm.ExecuteNonQuery();
+        //             Console.WriteLine("------------------>>>>>>>>"+cnt);
+        //             return true;
+        //         }catch{
+        //             return false;
+        //         }
+        //     }
+        //     return false;
+        // }
+
+        public int NonQuery(string sql,Hashtable ht){
             if(status){
                 try{
                     SqlCommand comm = new SqlCommand();
@@ -101,12 +124,12 @@ namespace VCSdotnet{
 
                     int cnt = comm.ExecuteNonQuery();
                     Console.WriteLine("------------------>>>>>>>>"+cnt);
-                    return true;
+                    return cnt;
                 }catch{
-                    return false;
+                    return 0;
                 }
             }
-            return false;
+            return 0;
         }
     }
 }

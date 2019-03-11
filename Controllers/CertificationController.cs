@@ -22,5 +22,32 @@ namespace VCSdotnet.Controllers
             db.Close();
             return result;
         }
+
+        [Route("api/certificationdetail")]
+        [EnableCors("AllowOrigin")]
+        [HttpPost]
+        public ArrayList GetCertificationDetail([FromForm] string ono)
+        {
+            Database db = new Database();
+            Hashtable param = new Hashtable();
+            param.Add("@oNo",ono);
+            ArrayList result = db.GetList("sp_SelectCertificationDetail",param);
+            db.Close();
+            return result;
+        }
+
+        [Route("api/certificationok")]
+        [EnableCors("AllowOrigin")]
+        [HttpPost]
+        public int GetCertificationOk([FromForm] string ono,[FromForm] string mno)
+        {
+            Database db = new Database();
+            Hashtable param = new Hashtable();
+            param.Add("@oNo",ono);
+            param.Add("@mNo",mno);
+            int result = db.NonQuery("sp_SelectCertificationOk",param);
+            db.Close();
+            return result;
+        }
     }
 }
