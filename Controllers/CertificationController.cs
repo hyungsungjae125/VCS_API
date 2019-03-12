@@ -39,12 +39,13 @@ namespace VCSdotnet.Controllers
         [Route("api/certificationok")]
         [EnableCors("AllowOrigin")]
         [HttpPost]
-        public int GetCertificationOk([FromForm] string ono,[FromForm] string mno)
+        public int GetCertificationOk([FromForm] string ono,[FromForm] string mno,[FromForm] string time)
         {
             Database db = new Database();
             Hashtable param = new Hashtable();
             param.Add("@oNo",ono);
             param.Add("@mNo",mno);
+            param.Add("@time",time);
             int result = db.NonQuery("sp_SelectCertificationOk",param);
             db.Close();
             return result;

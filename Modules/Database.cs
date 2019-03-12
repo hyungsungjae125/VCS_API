@@ -90,6 +90,25 @@ namespace VCSdotnet{
             return null;
         }
 
+        public SqlDataReader GetReader(string sql,Hashtable ht){
+            if(status){
+                ArrayList result = new ArrayList();
+                try{
+                    SqlCommand comm = new SqlCommand();
+                    comm.Connection=conn;
+                    comm.CommandText=sql;
+                    comm.CommandType=CommandType.StoredProcedure;
+                    foreach(DictionaryEntry data in ht){
+                        comm.Parameters.AddWithValue(data.Key.ToString(),data.Value);
+                    }
+                    
+                    return comm.ExecuteReader();
+                }catch{
+                    return null;
+                }
+            }
+            return null;
+        }
         // public bool NonQuery(string sql,Hashtable ht){
         //     if(status){
         //         try{
